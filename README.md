@@ -92,7 +92,7 @@ WHERE LEFT(name,1) LIKE LEFT (capital,1) AND name <> capital;
 **12-NOT IN** es el opuesto de IN, sirve para comprobar que el resultado no está en una lista
 
 ## SELECT dentro de un SELECT
-**1- **El resultado de un **SELECT** puede usarse como valor para otra consulta, de esta forma podemos realizar consultas más complejas
+**1-** El resultado de un **SELECT** puede usarse como valor para otra consulta, de esta forma podemos realizar consultas más complejas
 
 **Ejemplo:**
 
