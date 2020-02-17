@@ -114,7 +114,7 @@ SELECT player, teamid, stadium, mdate
   FROM game JOIN goal ON (id=matchid)
 WHERE teamid = 'GER';
 
-##Usando NULL
+## Usando NULL
 **1-NULL** es un valor que se da cuando es desconocido o inapropiado
 
 **2-IS NULL** se usa para obtener los elementos cuyo valor es NULL. **IS NOT NULL** sirve para justo lo contrario
