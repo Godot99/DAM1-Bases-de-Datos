@@ -9,13 +9,13 @@
 5. DCL
 6. SCL
 
-###DQL (Declarative Query Language)
+### DQL (Declarative Query Language)
 Es el sublenguaje usado a la hora de hacer las consultas, su principal comando es **SELECT**. Se encuentra explicado en la primera parte de estos apuntes realizada en el primer trimestre.
 
-###DDL(Data Definition Language )
+### DDL(Data Definition Language )
 Se usa para crear, modificar o borrar tablas. Sus comandos principalos son **CREATE**, **ALTER**, **DROP**.
 
-####CREATE
+#### CREATE
 Este comando se usa para crear schemas, dominios, tablas, etc. La mejor manera de verlo es en un ejemplo:
 
 ```
@@ -35,7 +35,7 @@ CREATE TABLE Sede(
  ```
 En el ejemplo también podemos ver el uso de "restricciones" o **CONSTRAINT** para limitar el tipo de dato a usar. Algunos de estos son **NOT NULL** o **PRIMARY KEY** entre muchos otros.
 
-####ALTER
+#### ALTER
 Es usado para modificar tablas ya creadas. Su función principal es la de añadir o borrar columnas y constraints, aunque tiene otros usos. Ejemplo:
 ```
 CREATE TABLE Profesor (
@@ -63,7 +63,7 @@ ALTER TABLE Profesor
         ON DELETE SET NULL
         ON UPDATE NO ACTION;
 ```
-####DROP
+#### DROP
 Es usado para borrar schemas y tablas. Como se ve en el ejemplo anterior, se puede combinar con ALTER para borrar también columnas o constraints. Ejemplo:
 ```
 DROP TABLE [IF EXISTS] table_name [CASCADE | RESTRICT];
@@ -73,10 +73,10 @@ Como puede verse, usa varias contraint para evitar el borrar algo que no debemos
 **CASCADE** si la tabla a borrar es usada en otras tablas, estas son borradas también.
 **RESTRICT** evita que la tabla se borre si alguna otra depende de ella. PostgreSQL la usa por defecto.
 
-###DML (Data Manipulation Language)
+### DML (Data Manipulation Language)
 Este sublenguaje es usado para manipular los datos de las tablas. Sus principales comandos son **INSERT**, **UPDATE** y **DELETE**
 
-####INSERT
+#### INSERT
 Usado como su nombre indica para insertar datos en las tablas. Ejemplo:
 ```
 INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
@@ -84,7 +84,7 @@ VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway
 ```
 Si quisieramos poner datos en todas las columnas, podemos omitir el especificar las columnas.
 
-####UPDATE
+#### UPDATE
 Modifica los datos ya existentes en una tabla. Ejemplo:
 ```
 UPDATE Customers
@@ -93,7 +93,7 @@ WHERE CustomerID = 1;
 ```
 En el ejemplo se actualiza tanto el nombre como la ciudad para el cliente con el ID 1.
 
-####DELETE
+#### DELETE
 Borra los datos de una tabla. Ejemplo:
 ```
 DELETE FROM Customers WHERE CustomerName='Alfreds Schmidt';
